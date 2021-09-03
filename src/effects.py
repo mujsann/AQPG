@@ -122,35 +122,7 @@ class Effects:
         # len(acts_params)
         return (pred_entities)
 
-    # #explicit effect
-    # Explicit = ['induce', 'give rise', 'stir up', 'create', 'start', 'launch', 'produce', 'generate', 'effect', 'arouse', 'provoke', 'elicit', 'bring about','lead',
-    # 'lead to', 'trigger', 'derive', 'associate', 'relate', 'link', 'stem from', 'originate', 'bring forth', 'lead up', 'trigger off', 'bring on', 'result from',
-    #             'set up', 'commence', "set off", 'set in motion', 'bring on', 'conduce to', 'educe', 'originate in', 'lead off', 'spark', 'spark off', 'evoke', "link up", "activate", 'actuate'
-    #            "put forward", "give birth to", "fire up", "unlease"]
-
-    # def get_ex_effect(subs,seg):
-    #     for verb in Explicit:
-    #         a = seg.find(verb)
-    #         if(a>=0):
-    #             return (get_past(lemmat(verb)))
-    #         else:
-    #             return None
-
-    # #implicit Effects
-    # from nltk.corpus import wordnet as wn
-    # def imp_effects(subsegment):
-    #     action = subsegment[0]
-    #     for synset in wn.synsets(action):
-    #         a = synset.definition()
-    #         if(a.find('cause to')>=0):
-    #             return nlp(a)[2]
-
-    # imp_effects(["kill"])
-
-    # use this to supply effects.py and use it to supply operators later too
-    # check the verb
-    # check if the former effect has ?non, if yes, replace with one of the ones here
-    # also check if the ?xxx is one of the parameters
+  
 
     def alt_effects(self, eff, params, subsegments):  # eff is the segment's direct effect e.g read ?inf
         pred_entities = self.get_pred_entities(subsegments)
